@@ -7,8 +7,10 @@ A script and instructions to restore pixel art that has been poorly resized or c
 ## Features / 功能
 
 -   Prompts for a "Pixel Block Size" to determine the correct downscale factor.
+    
     弹窗提示输入“像素块尺寸”来确定正确的缩小比例。
 -   Resizes the image to its original pixel art dimensions.
+    
     将图像缩小到其原始的像素画尺寸。
 
 ## Installation / 安装
