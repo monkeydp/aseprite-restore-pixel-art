@@ -1,6 +1,5 @@
--- Pixel Art Repair Helper Script (v5 - Resize Only)
--- This script ONLY performs the resizing step, because the color mode change is bugged
--- on your specific compiled version of Aseprite.
+-- Pixel Art Repair Helper Script (v6 - Typo Fixed)
+-- This is the final, correct version.
 
 local dlg = Dialog {
   title = "Step 1: Resize Image"
@@ -8,9 +7,9 @@ local dlg = Dialog {
 
 dlg
   :number {
-    id = "pixel_sizea",
+    id = "pixel_size", -- Correct ID, no typo.
     label = "Detected Pixel Block Size:",
-    text = "9", -- Defaulted to the value from your image
+    text = "9",
     decimals = 0
   }
   :separator()
@@ -35,8 +34,8 @@ dlg
       local args = dlg.data
       local pixelSize = tonumber(args.pixel_size)
 
-      if pixelSize <= 1 then
-        app.alert("Pixel size must be greater than 1.")
+      if not pixelSize or pixelSize <= 1 then
+        app.alert("Pixel size must be a number greater than 1.")
         return
       end
 
